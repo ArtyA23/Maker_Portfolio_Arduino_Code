@@ -17,17 +17,17 @@ int ampLeft, ampRight;
 
 int amplitude;
 
-int baselineLeft = 400;
-int baselineRight = 400;
+int baselineLeft = 300;
+int baselineRight = 300;
 
-const int turnThreshold = 15;  // difference needed to turn
+const int turnThreshold = 20;  // difference needed to turn
 
 const int max_amplitude = 400; // FIX: larger, realistic range
 const int delta = 80;     //max_amplitude / (num_LEDs + 1);
 
 const int thresh1 = delta; //red LED
-const int thresh2 = thresh1 + 150; //yellow LED
-const int thresh3 = thresh2 + 150; //green LED
+const int thresh2 = thresh1 + 100; //yellow LED
+const int thresh3 = thresh2 + 100; //green LED
 const int thresh4 = thresh3 + 20;  //blue LED
 const int thresh5 = thresh4 + 20;  //violet LED
 const int thresh6 = thresh5 + 5;   //buzzer
@@ -99,13 +99,13 @@ void loop() {
   if (amplitude > thresh4)      speed = 220;
   else if (amplitude > thresh3) speed = 200;
   else if (amplitude > thresh2) speed = 160;
-  else                          speed = 120;
+  else                          speed = 50;
 
   if (diff > turnThreshold) {
-    turnLeft(speed);
+    turnRight(speed);
   }
   else if (diff < -turnThreshold) {
-    turnRight(speed);
+    turnLeft(speed);
   }
   else {
     driveForward(speed);
