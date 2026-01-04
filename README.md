@@ -13,4 +13,7 @@ Each piece of code illustrates the steps that my project progressed through.
 
 5. Next, I made my sound_stimulated_car code, which took my indicator programs and connected them to the chassis of my robot. This allowed the robot to drive when it detected louder sounds and increase speed depending on the intensity of the sound. Using this code, I was able to begin code for my final version: a robot that could track the direction of sound and move to it.
 
-6. ...
+6. My last programs are my moving_towards_sound_(v1, v2, & v3). In these, I code my robot to use 2 electret microphones and move towards the sound. The code increased speed with sound intensity, and still incorporated the lights to show sound intensity. Each version accounts for an iteration of my code, to fix some issue:
+   a. moving_towards_sound_v1 is my first version, which takes the difference between the volumes on either mic and moves towards the louder sound on the specific side.
+   b. moving_towards_sound_v2 is my second version and attempts to account for inconsistencies in movement with the robot. It tries to use a smoothing function and a multiplier on the difference to change the amount of turn. This code actually didn't work as well, and needed a lot of tuning.
+   c. moving_towards_sound_v3 is the last version, and reverts back to the original code, ut use
