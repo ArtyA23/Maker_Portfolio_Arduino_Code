@@ -16,12 +16,12 @@ int amplitude;
 const int max_amplitude = 600; // FIX: larger, realistic range
 const int delta = max_amplitude / (num_LEDs + 1);
 
-const int thresh1 = delta; 
-const int thresh2 = thresh1 + 80; 
-const int thresh3 = thresh2 + 100;
-const int thresh4 = thresh3 + 120;
-const int thresh5 = thresh4 + 20;
-const int thresh6 = thresh5 + 30;
+const int thresh1 = delta; //red
+const int thresh2 = thresh1 + 80; //orange
+const int thresh3 = thresh2 + 100; //yellow
+const int thresh4 = thresh3 + 120; //green
+const int thresh5 = thresh4 + 20; //violet
+const int thresh6 = thresh5 + 30; //buzzer
 
 void setup() {
   pinMode(led1, OUTPUT);
