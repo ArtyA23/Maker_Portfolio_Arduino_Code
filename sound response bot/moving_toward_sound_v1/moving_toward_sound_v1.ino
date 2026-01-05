@@ -78,6 +78,7 @@ void setup() {
 }
 
 void loop() {
+  //motor logic below
   micLeft = analogRead(micpinLeft);
   micRight = analogRead(micpinRight);
 
@@ -118,6 +119,8 @@ else {
 
   Serial.println(amplitude);
 
+//led logic below
+  
   if (amplitude > thresh6) {
     digitalWrite(led1, HIGH);
     digitalWrite(led2, HIGH);
